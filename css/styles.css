@@ -1,0 +1,394 @@
+    /* Root color variables for your palette */
+    :root {
+      --light-blue: #ADD8E6;
+      --green: #90EE90;
+      --light-orange: #FADDA0;
+      --warm-cream: #FFFDD0;
+      --off-white: #F8F8FF;
+    }
+
+    /* Header Styles */
+header {
+  background: var(--warm-cream);
+  color: #222;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  height: 70px; /* Fixed height for header */
+  min-height: 50px;
+  display: block; /* Remove flex for manual positioning */
+}
+
+.logo {
+  position: absolute;
+  left: 20px; /* Distance from left edge */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav {
+  position: absolute;
+  right: 20px; /* Distance from right edge */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-left: 18px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: var(--light-orange);
+}
+
+
+
+    /* Set up a soft gradient background */
+    body {
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at 50% 40%, var(--light-blue) 0%, var(--green) 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    }
+
+
+    .main-content {
+        flex: 1;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+
+    /* Container for the entire concentric circles layout */
+    .centerpiece-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    /* Central logo/photo circle */
+    .center-logo {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 160px; height: 160px;
+      background: var(--off-white);
+      border-radius: 50%;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      overflow: hidden;
+    }
+    /* Placeholder image styling */
+    .center-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    /* Middle circle: service links arranged in a circle */
+    .service-circle {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      z-index: 2;
+      pointer-events: none; /* Prevent accidental hover on the circle itself */
+    }
+
+    /* Each service link is absolutely positioned around the circle */
+    .service-link {
+      position: absolute;
+      width: 110px; height: 40px;
+      background: var(--warm-cream);
+      color: #222;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      pointer-events: auto; /* Allow clicking */
+      border: 2px solid var(--light-orange);
+    }
+    .service-link:hover {
+      background: var(--light-orange);
+      color: #111;
+      transform: scale(1.08);
+    }
+    /* Position each service link using trigonometry (6 links, 60deg apart) */
+    .service-link:nth-child(1) { /* Bartending */
+      left: 50%; top: 0%;
+      transform: translate(-50%, -50%);
+    }
+    .service-link:nth-child(2) { /* Menus */
+      left: 90%; top: 22%;
+      transform: translate(-50%, -50%);
+    }
+    .service-link:nth-child(3) { /* Pricing */
+      left: 90%; top: 78%;
+      transform: translate(-50%, -50%);
+    }
+    .service-link:nth-child(4) { /* Notary */
+      left: 50%; top: 100%;
+      transform: translate(-50%, -50%);
+    }
+    .service-link:nth-child(5) { /* About */
+      left: 10%; top: 78%;
+      transform: translate(-50%, -50%);
+    }
+    .service-link:nth-child(6) { /* Contact */
+      left: 10%; top: 22%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Animated propeller for scrolling text/emojis */
+    .propeller {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 440px; height: 440px;
+      border-radius: 50%;
+      z-index: 1;
+      pointer-events: none;
+      overflow: visible;
+    }
+    /* The actual scrolling text path */
+    .scrolling-text {
+      position: absolute;
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: rotate 18s linear infinite;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+    /* Keyframes for continuous rotation */
+    @keyframes rotate {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+    /* Style for the text along the propeller */
+    .scrolling-text span {
+      font-size: 1.2rem;
+      color: #333;
+      letter-spacing: 0.15em;
+      white-space: pre;
+      font-weight: 500;
+      text-shadow: 0 1px 4px rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%; /* Make the span fill the propeller */
+      height: 100%;
+    }
+
+    /* Style for images in the propeller arms */
+    .scrolling-text img {
+    height: 80px; /* Adjust this value to make them smaller/larger */
+    width: auto; /* Maintains aspect ratio */
+    margin: 0 150px; /* Adds some spacing between the images */
+    opacity: 0.9; /* Makes them slightly transparent so they're not too dominant */
+    }
+
+    /* Footer Styles */
+    footer {
+      background: var(--warm-cream);
+      color: #222;
+      text-align: center;
+      padding: 10px 0;
+      position: sticky; /* Make it sticky */
+      bottom: 0; /* Stick to the bottom */
+      width: 100%; /* Full width */
+      z-index: 100; /* Ensure it stays on top of other content */
+      box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    }
+
+    .social-links {
+      margin-bottom: 10px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: var(--light-orange);
+    }
+
+
+    /* Artistic background for About page */
+    .about-art-bg {
+      position: absolute;
+      top: 80px;
+      left: -60px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle at 30% 30%, #f7c8e0 0%, #fff0 80%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* About section styling */
+    .about-section {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 100px auto 60px auto;
+      background: rgba(255,255,255,0.95);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .about-highlight {
+      color: #b85fc6;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .about-features {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      flex: 1 1 180px;
+      background: #f7f1fa;
+      border-radius: 16px;
+      padding: 24px 16px;
+      margin: 8px;
+      box-shadow: 0 2px 8px rgba(184,95,198,0.07);
+    }
+
+    .feature-icon {
+      font-size: 2.5em;
+      margin-bottom: 12px;
+    }
+
+    .about-quote {
+      margin-top: 32px;
+      font-style: italic;
+      color: #7a3b8c;
+      font-size: 1.2em;
+      border-left: 4px solid #b85fc6;
+      padding-left: 16px;
+    }
+    /* Combined Media Query for Mobile-Friendly Version */
+    @media (max-width: 600px) {
+      /* Header Styles for Mobile */
+      header {
+        height: auto; /* Adjust height for mobile */
+        min-height: auto;
+        padding: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        position: static;
+        transform: none;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav li {
+        margin: 5px 0;
+      }
+
+      /* Existing Styles for Mobile */
+      .centerpiece-container {
+        width: 95vw;
+        height: 95vw;
+        max-width: 98vw;
+        max-height: 98vw;
+      }
+
+      .propeller {
+        width: 80vw;
+        height: 80vw;
+      }
+
+      .service-circle {
+        width: 60vw;
+        height: 60vw;
+      }
+
+      .center-logo {
+        width: 28vw;
+        height: 28vw;
+        min-width: 100px;
+        min-height: 100px;
+      }
+
+      .service-link {
+        width: 22vw;
+        min-width: 70px;
+        height: 36px;
+        font-size: 0.95rem;
+      }
+    }
