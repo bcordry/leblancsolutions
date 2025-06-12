@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | LeBlanc Solutions</title>
+
+  <!-- Shared sitewide styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contactstyles.css">
+
+</head>
+
+<body>
+
+  <!-- Header reused verbatim from index.html -->
+  <header>
+    <div class="logo">
+      <a href="/"><img src="assets/images/logos/leblanc solutions stylized text no bg.png"
+                       alt="LeBlanc Solutions Logo" height="50"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="contact-main">
+
+    <!-- 1) Contact info + picture -->
+    <section class="info-photo-wrap">
+      <!-- Contact details -->
+      <div class="contact-info-box">
+        <h1>Reach Out</h1>
+        <p>
+            Phone:
+            <span id="phone-wrapper">
+            <button id="reveal-phone" type="button">Reveal Phone</button>
+            </span>
+        </p>
+        <p>
+            Email:
+            <span id="email-wrapper">
+            <button id="reveal-email" type="button">Reveal Email</button>
+            </span>
+        </p>
+      </div>
+
+      <!-- Jewel’s photo (placeholder) -->
+      <img class="contact-photo"
+           src="https://placehold.co/400x500?text=Jewel+LeBlanc"
+           alt="Jewel LeBlanc">
+    </section>
+
+    <!-- 2) Quote request form -->
+    <section class="quote-form-section">
+      <h2>Request a Custom Quote</h2>
+
+      <form id="quote-form" class="quote-form">
+        <label>
+          Name
+          <input type="text" name="Name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="Email" required>
+        </label>
+
+        <label>
+          Event Date
+          <input type="date" name="Event Date" required>
+        </label>
+
+        <label>
+          Type of Event
+          <select name="Event Type" required>
+            <option value="Wedding">Wedding</option>
+            <option value="House Party">House Party</option>
+            <option value="Barbecue">Barbecue</option>
+            <option value="Outdoor Party">Outdoor Party</option>
+            <option value="Formal Party">Formal Party</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <label>
+          Number of Guests
+          <select name="Guest Count" required>
+            <option value="<10">&lt;10</option>
+            <option value="11-25">11-25</option>
+            <option value="26-50">26-50</option>
+            <option value="50+">50+</option>
+          </select>
+        </label>
+
+        <label>
+          Details / Special Requests
+          <textarea name="Message"></textarea>
+        </label>
+
+        <button type="submit">Send Request</button>
+        <span id="form-status" style="margin-left:12px;"></span>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer reused verbatim from index.html -->
+  <footer>
+    <div class="social-links">
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Jewel Leblanc. All rights reserved. Site created and maintained by Brian Cordry.</p>
+  </footer>
+
+  <!-- Page-specific JS -->
+  <script src="js/contactscript.js"></script>
+</body>
+</html>
