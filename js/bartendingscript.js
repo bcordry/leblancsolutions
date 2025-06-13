@@ -1,9 +1,9 @@
 // JavaScript for tab functionality and animations
 document.addEventListener('DOMContentLoaded', function() {
-  const tabButtons = document.querySelectorAll('.tab-btn'); // Get all tab buttons
-  const tabContents = document.querySelectorAll('.tab-content'); // Get all tab content sections
+  const tabButtons = document.querySelectorAll('.tab-btn'); // Get all main tab buttons
+  const tabContents = document.querySelectorAll('.tab-content'); // Get all main tab content sections
   
-  // Add click event listener to each tab button
+  // Main tab switching functionality with smooth animations
   tabButtons.forEach(button => {
     button.addEventListener('click', function() {
       const targetTab = this.getAttribute('data-tab'); // Get the target tab ID
@@ -12,25 +12,51 @@ document.addEventListener('DOMContentLoaded', function() {
       tabButtons.forEach(btn => btn.classList.remove('active'));
       this.classList.add('active');
       
-      // Animate out all tab contents
+      // Hide all tab contents
       tabContents.forEach(content => {
         if (content.classList.contains('active')) {
           content.classList.remove('active');
-          // Wait for transition to finish before hiding pointer events
-          setTimeout(() => {
-            content.style.zIndex = 0;
-            content.style.pointerEvents = 'none';
-          }, 300);
+          content.classList.add('hidden');
         }
       });
       
-      // Animate in the target tab
+      // Show target tab with animation
       const targetContent = document.getElementById(targetTab);
+      targetContent.classList.remove('hidden');
+      // Allow the browser to register the removal of .hidden before adding .active for animation
       setTimeout(() => {
         targetContent.classList.add('active');
-        targetContent.style.zIndex = 1;
-        targetContent.style.pointerEvents = 'auto';
-      }, 300);
+      }, 10);
+    });
+  });
+  
+  // Sub-tab switching functionality for menus
+  const subTabButtons = document.querySelectorAll('.sub-tab-btn'); // Get all sub-tab buttons
+  const subTabContents = document.querySelectorAll('.sub-tab-content'); // Get all sub-tab content sections
+  
+  subTabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const targetSubTab = this.getAttribute('data-subtab'); // Get the target sub-tab ID
+      
+      // Remove active class from all sub-tab buttons
+      subTabButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Hide all sub-tab contents
+      subTabContents.forEach(content => {
+        if (content.classList.contains('active')) {
+          content.classList.remove('active');
+          content.classList.add('hidden');
+        }
+      });
+      
+      // Show target sub-tab with animation
+      const targetSubContent = document.getElementById(targetSubTab);
+      targetSubContent.classList.remove('hidden');
+      // Allow the browser to register the removal of .hidden before adding .active for animation
+      setTimeout(() => {
+        targetSubContent.classList.add('active');
+      }, 10);
     });
   });
   
