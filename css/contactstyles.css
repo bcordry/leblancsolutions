@@ -82,6 +82,22 @@
     }
     .quote-form button:hover { background: var(--light-orange); }
 
+/* Font Styles */
+/* Huninn for body text */
+.huninn-regular {
+  font-family: "Huninn", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Edu SA Hand for titles */
+.edu-sa-hand {
+  font-family: "Edu SA Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400; /* or 700 for bold */
+  font-style: normal;
+}
+
     /* Small-screen tweaks */
     @media (max-width: 700px){
       .contact-photo{width:100%;max-width:340px;}
