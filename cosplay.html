@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosplay Portfolio | LeBlanc Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Link to the shared stylesheet and cosplay-specific stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cosplaystyles.css">
+</head>
+
+<body>
+  
+  <!-- Header reused from index.html -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logos/leblanc solutions stylized text no bg.png" alt="LeBlanc Solutions Logo" height="50">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="cosplay.html" class="active">Cosplay</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Cosplay Content -->
+  <main class="cosplay-main" id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="cosplay-hero">
+      <h1>Cosplay Portfolio</h1>
+      <p class="hero-subtitle">Bringing beloved characters to life through creativity and craftsmanship</p>
+    </section>
+
+    <!-- Video Reel Section -->
+    <section class="video-reel-section">
+      <h2>Highlight Reel</h2>
+      <div class="video-container">
+        <!-- Placeholder for YouTube embed - replace with actual video when ready -->
+        <div class="video-placeholder">
+          <div class="placeholder-content">
+            <div class="play-icon">▶</div>
+            <p>Cosplay Highlight Reel</p>
+            <span class="placeholder-note">Video coming soon!</span>
+          </div>
+        </div>
+        <!-- When ready, replace placeholder with:
+        <iframe 
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+          title="Jewel's Cosplay Highlight Reel"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+        -->
+      </div>
+    </section>
+
+    <!-- Rotating Cosplay Showcase -->
+    <section class="cosplay-showcase">
+      <h2>Featured Cosplays</h2>
+      
+      <div class="carousel-container">
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev-arrow" aria-label="Previous cosplay">
+          <span>‹</span>
+        </button>
+        <button class="carousel-arrow next-arrow" aria-label="Next cosplay">
+          <span>›</span>
+        </button>
+
+        <!-- Carousel Track -->
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            
+            <!-- Cosplay Item 1 -->
+            <div class="cosplay-item active" data-index="0">
+              <div class="cosplay-image">
+                <img src="assets/images/cosplay/cosplay1.jpg" alt="Sailor Moon Cosplay" loading="lazy">
+                <div class="image-overlay">
+                  <span class="character-name">Sailor Moon</span>
+                </div>
+              </div>
+              <div class="cosplay-details">
+                <h3>Sailor Moon</h3>
+                <p class="anime-series">Sailor Moon Series</p>
+                <p class="cosplay-description">
+                  A classic magical girl transformation! This costume features hand-sewn details, custom accessories, and the iconic sailor fuku design. The tiara and brooch were crafted with attention to every sparkle and detail from the anime.
+                </p>
+                <div class="cosplay-features">
+                  <span class="feature-tag">Hand-sewn</span>
+                  <span class="feature-tag">Custom Accessories</span>
+                  <span class="feature-tag">Screen Accurate</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cosplay Item 2 -->
+            <div class="cosplay-item" data-index="1">
+              <div class="cosplay-image">
+                <img src="assets/images/cosplay/cosplay2.jpg" alt="Nezuko Kamado Cosplay" loading="lazy">
+                <div class="image-overlay">
+                  <span class="character-name">Nezuko Kamado</span>
+                </div>
+              </div>
+              <div class="cosplay-details">
+                <h3>Nezuko Kamado</h3>
+                <p class="anime-series">Demon Slayer</p>
+                <p class="cosplay-description">
+                  Bringing the beloved demon sister to life! This cosplay features the iconic pink kimono with geometric patterns, custom bamboo muzzle, and carefully styled hair. The attention to fabric choice and color matching makes this costume truly authentic.
+                </p>
+                <div class="cosplay-features">
+                  <span class="feature-tag">Authentic Fabrics</span>
+                  <span class="feature-tag">Custom Props</span>
+                  <span class="feature-tag">Detailed Styling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cosplay Item 3 -->
+            <div class="cosplay-item" data-index="2">
+              <div class="cosplay-image">
+                <img src="assets/images/cosplay/cosplay3.jpg" alt="Zero Two Cosplay" loading="lazy">
+                <div class="image-overlay">
+                  <span class="character-name">Zero Two</span>
+                </div>
+              </div>
+              <div class="cosplay-details">
+                <h3>Zero Two</h3>
+                <p class="anime-series">Darling in the FranXX</p>
+                <p class="cosplay-description">
+                  The darling herself! This striking cosplay captures Zero Two's iconic red pilot suit with custom-fitted details. The horns and makeup were carefully crafted to match her distinctive look, complete with the signature confident pose.
+                </p>
+                <div class="cosplay-features">
+                  <span class="feature-tag">Custom Fitted</span>
+                  <span class="feature-tag">Prosthetic Horns</span>
+                  <span class="feature-tag">Professional Makeup</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cosplay Item 4 -->
+            <div class="cosplay-item" data-index="3">
+              <div class="cosplay-image">
+                <img src="assets/images/cosplay/cosplay4.jpg" alt="Miku Hatsune Cosplay" loading="lazy">
+                <div class="image-overlay">
+                  <span class="character-name">Hatsune Miku</span>
+                </div>
+              </div>
+              <div class="cosplay-details">
+                <h3>Hatsune Miku</h3>
+                <p class="anime-series">Vocaloid</p>
+                <p class="cosplay-description">
+                  The world's favorite virtual singer! This Miku cosplay features the classic teal twin-tails with custom-styled wig work, detailed tie and sleeve accessories, and the perfect tech-pop aesthetic that makes Miku so iconic.
+                </p>
+                <div class="cosplay-features">
+                  <span class="feature-tag">Custom Wig Styling</span>
+                  <span class="feature-tag">Tech Accessories</span>
+                  <span class="feature-tag">Concert Ready</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cosplay Item 5 -->
+            <div class="cosplay-item" data-index="4">
+              <div class="cosplay-image">
+                <img src="assets/images/cosplay/cosplay5.jpg" alt="Rem Cosplay" loading="lazy">
+                <div class="image-overlay">
+                  <span class="character-name">Rem</span>
+                </div>
+              </div>
+              <div class="cosplay-details">
+                <h3>Rem</h3>
+                <p class="anime-series">Re:Zero</p>
+                <p class="cosplay-description">
+                  The devoted maid with a heart of gold! This Rem cosplay showcases the detailed maid outfit with custom embroidery, perfectly styled blue hair, and the signature horn accessory. Every ruffle and ribbon was crafted with care.
+                </p>
+                <div class="cosplay-features">
+                  <span class="feature-tag">Custom Embroidery</span>
+                  <span class="feature-tag">Detailed Accessories</span>
+                  <span class="feature-tag">Maid Perfection</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button class="indicator active" data-index="0" aria-label="View Sailor Moon cosplay"></button>
+          <button class="indicator" data-index="1" aria-label="View Nezuko cosplay"></button>
+          <button class="indicator" data-index="2" aria-label="View Zero Two cosplay"></button>
+          <button class="indicator" data-index="3" aria-label="View Miku cosplay"></button>
+          <button class="indicator" data-index="4" aria-label="View Rem cosplay"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cosplay Services Section -->
+    <section class="cosplay-services">
+      <h2>Cosplay Consultation Services</h2>
+      <p class="services-intro">Interested in creating your own amazing cosplay? Let Jewel help bring your favorite character to life!</p>
+      
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-icon">🎨</div>
+          <h3>Design Consultation</h3>
+          <p>Get expert advice on costume design, fabric choices, and construction techniques for your dream cosplay.</p>
+        </div>
+        
+        <div class="service-item">
+          <div class="service-icon">✂️</div>
+          <h3>Pattern & Construction</h3>
+          <p>Assistance with pattern making, sewing techniques, and construction methods for complex costume pieces.</p>
+        </div>
+        
+        <div class="service-item">
+          <div class="service-icon">💄</div>
+          <h3>Makeup & Styling</h3>
+          <p>Learn character-specific makeup techniques and wig styling to complete your transformation.</p>
+        </div>
+        
+        <div class="service-item">
+          <div class="service-icon">📸</div>
+          <h3>Photo Shoot Planning</h3>
+          <p>Tips for posing, location scouting, and capturing the perfect shots to showcase your cosplay.</p>
+        </div>
+      </div>
+      
+      <div class="services-cta">
+        <p>Ready to start your cosplay journey?</p>
+        <a href="contact.html" class="cta-btn">Get Cosplay Consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer reused from index.html -->
+  <footer>
+    <div class="social-links">
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">Facebook</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page">Twitter</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">Instagram</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn page">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Jewel Leblanc. All rights reserved. Site created and maintained by Brian Cordry.</p>
+  </footer>
+
+  <!-- Cosplay JavaScript for carousel functionality -->
+  <script src="js/cosplayscript.js"></script>
+
+</body>
+</html>

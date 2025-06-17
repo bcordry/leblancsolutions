@@ -7,85 +7,179 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Huninn&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Link to the shared stylesheet for coordinated style -->
+  <!-- Link to the shared stylesheet and about-specific stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/aboutstyles.css">
 </head>
+
+
 <body>
   
-
-
-    <!-- Header reused from index.html -->
+  <!-- Header reused from index.html -->
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="assets/images/logos/leblanc solutions stylized text no bg.png" alt="Leblanc Solutions Logo" height="50">
+        <img src="assets/images/logos/leblanc solutions stylized text no bg.png" alt="LeBlanc Solutions Logo" height="50">
       </a>
     </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Artistic About Section -->
-  <main>
+  <!-- Main About Content -->
+  <main id="main-content">
     <!-- Artistic background shape for visual interest -->
     <div class="about-art-bg"></div>
+    
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <div class="hero-content">
+        <h1>Meet Jewel LeBlanc</h1>
+        <p class="hero-subtitle">The creative force behind LeBlanc Solutions</p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/jewel/jewel filler 1.jpeg" alt="Jewel LeBlanc, founder of LeBlanc Solutions" class="jewel-photo">
+      </div>
+    </section>
+
+    <!-- Main About Section -->
     <section class="about-section">
       <h2>About LeBlanc Solutions</h2>
-      <p>
-        <!-- Brief, engaging intro -->
-        <span class="about-highlight">LeBlanc Solutions</span> is the creative vision of <strong>Jewel LeBlanc</strong>, offering bespoke bartending and event solutions with a personal touch.  
-        Our mission is to blend artistry, hospitality, and innovation—crafting memorable experiences, one event at a time.
+      <p class="intro-text">
+        <span class="about-highlight">LeBlanc Solutions</span> is the creative vision of <strong>Jewel LeBlanc</strong>, 
+        offering bespoke and personalized bartending and event solutions with an artistic touch. 
+        Her mission is to blend artistry, hospitality, and innovation - crafting memorable experiences one event at a time.
       </p>
+      
+      <!-- Jewel's Story -->
+      <div class="story-section">
+        <h3>Jewel's Story</h3>
+        <p>
+          What started as a passion for mixology and a penchant for dressing up has evolved into a full-service 
+          bartending experience that brings creativity to every event. 
+          Jewel combines her love for crafting unique cocktails with her natural ability to connect with people, 
+          creating an atmosphere where every guest feels welcomed and every drink tells a story.
+        </p>
+        <p>
+          From casual costume parties, to intimate get-togethers and elegant weddings, Jewel brings the same level of dedication and care to every event. 
+          Her approach isn't just about serving drinks - it's about creating moments, sparking conversations, 
+          and ensuring that your celebration is as unique as you are.
+        </p>
+      </div>
+
+      <!-- Services Overview
       <div class="about-features">
-        <!-- Artistic icons or shapes can be replaced with real SVGs or images -->
         <div class="feature">
           <div class="feature-icon">🍸</div>
-          <h3>Crafted Cocktails</h3>
-          <p>Signature drinks tailored to your taste and occasion.</p>
+          <h4>Crafted Cocktails</h4>
+          <p>Signature drinks tailored to your taste and occasion, from classic favorites to colorful creations.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🎨</div>
-          <h3>Creative Flair</h3>
-          <p>Artistic presentation and a passion for detail in every pour.</p>
+          <h4>Creative Flair</h4>
+          <p>Artistic presentation and a passion for detail in every pour, making each drink a work of art - 
+            even directly inspired by modern art!</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🤝</div>
-          <h3>Personal Service</h3>
-          <p>Warm, attentive, and professional—making every guest feel special.</p>
+          <h4>Personal Service</h4>
+          <p>Warm, attentive, and professional service that makes every guest feel special and valued. And 
+            you won't even notice she's been there once the event is over!</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">👗</div>
+          <h4>Adaptable Experience</h4>
+          <p>Whether you're hosting a formal gala or a casual costume party, Jewel will have an outfit
+            and menu to match the theme of your get together.</p>
+        </div>
+      </div> -->
+
+      <!-- What Makes Us Different -->
+      <div class="differentiators">
+        <h3>What Makes LeBlanc Solutions Different</h3>
+        <div class="diff-grid">
+          <div class="diff-item">
+            <h4>🎯 Personalized Approach</h4>
+            <p>Every event is unique, and so is my approach. I'll work closely with you to understand your vision and bring it to life.</p>
+          </div>
+          <div class="diff-item">
+            <h4>🌟 Attention to Detail</h4>
+            <p>From the garnish on your cocktail to the setup of the bar, every detail is carefully considered and executed.</p>
+          </div>
+          <div class="diff-item">
+            <h4>🎭 Themed Experiences</h4>
+            <p>Love anime, vintage vibes, or tropical themes? I specialize in creating immersive menus & experiences that match your style.</p>
+          </div>
+          <div class="diff-item">
+            <h4>📚 Continuous Learning</h4>
+            <p>I'm always exploring new techniques, flavors, and trends to bring fresh ideas to your events.</p>
+          </div>
         </div>
       </div>
-      <blockquote class="about-quote">
-        “Great drinks are just the beginning—at LeBlanc Solutions, we create experiences.”
-      </blockquote>
+
+      <!-- Fun Facts -->
+      <div class="fun-facts">
+        <h3>Fun Facts About Jewel</h3>
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-icon">🍹</span>
+            <p><strong>Favorite cocktail to make:</strong> Anything with a creative twist on a classic, 
+            especially if it includes tequila!</p>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">🎌</span>
+            <p><strong>Specialty:</strong> Anime-inspired cocktails that taste as good as they look.</p>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">🎨</span>
+            <p><strong>Creative outlet:</strong> Rollerskating, cosplay, and bringing fictional characters to life.</p>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">📝</span>
+            <p><strong>Also certified:</strong> Notary public for your document needs!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission Statement -->
+      <div class="mission-section">
+        <h3>Our Mission</h3>
+        <blockquote class="about-quote">
+          "Great drinks are just the beginning - at LeBlanc Solutions, I help you create experiences that bring people together 
+           and leave lasting memories. Every event is an opportunity to celebrate life with creativity, care, and a touch of magic."
+        </blockquote>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="cta-section">
+        <h3>Ready to Create Something Amazing?</h3>
+        <p>Whether you're planning an intimate gathering or a grand celebration, let's work together to make it unforgettable.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="cta-btn primary">Get in Touch</a>
+          <a href="bartending.html" class="cta-btn secondary">View Services</a>
+        </div>
+      </div>
     </section>
   </main>
 
-    <!-- Footer reused from index.html -->
-      <footer>
-        <div class="social-links">
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">Facebook</a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page">Twitter</a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">Instagram</a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn page">LinkedIn</a>
-        </div>
-        <p>&copy; 2025 Jewel Leblanc. All rights reserved. Site created and maintained by Brian Cordry.</p>
-      </footer>
-
-  <!-- Inline comments for clarity -->
-  <!-- 
-    - The header and footer are reused from index.html for consistency.
-    - The .about-art-bg div is a decorative background shape for artistic flair.
-    - The .about-section contains the main about content, styled to match the site.
-    - The .about-features section uses emoji as placeholders for icons; swap for SVGs if desired.
-    - The .about-quote adds a personal, artistic touch.
-  -->
+  <!-- Footer reused from index.html -->
+  <footer>
+    <div class="social-links">
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">Facebook</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page">Twitter</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">Instagram</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn page">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Jewel Leblanc. All rights reserved. Site created and maintained by Brian Cordry.</p>
+  </footer>
 </body>
 </html>
