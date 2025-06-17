@@ -24,11 +24,14 @@
       max-width: 360px;
       min-width: 260px; 
     }
+
     .contact-info-box h1 {
-      margin-top: 0;
+    margin-top: 0;
+    font-family: 'Edu SA Hand', cursive; /* Updated this line */
     }
+
     .contact-info-box a {
-      color: var(--green);
+      color: var(--blue);
       font-weight: bold;
     }
 
@@ -42,13 +45,15 @@
 
     /* Quote form section */
     .quote-form-section {
-      background: rgba(255,255,255,0.95);
-      padding: 40px 28px;
-      border-radius: 24px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
-      max-width: 650px;
-      margin: 0 auto 60px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 40px 28px;
+    border-radius: 24px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+    max-width: 650px;
+    margin: 0 auto 60px auto;
+    font-family: 'Nunito', sans-serif; /* Updated this line */
     }
+
     .quote-form {
       display: flex;
       flex-direction: column;
@@ -82,21 +87,7 @@
     }
     .quote-form button:hover { background: var(--light-orange); }
 
-/* Font Styles */
-/* Huninn for body text */
-.huninn-regular {
-  font-family: "Huninn", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-/* Edu SA Hand for titles */
-.edu-sa-hand {
-  font-family: "Edu SA Hand", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400; /* or 700 for bold */
-  font-style: normal;
-}
 
     /* Small-screen tweaks */
     @media (max-width: 700px){

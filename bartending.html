@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Huninn&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Link to the shared stylesheet and bartending stylesheet for coordinated style -->
   <link rel="stylesheet" href="css/styles.css">
@@ -16,10 +17,12 @@
 
 <body>
   
+
+
   <!-- Header reused from index.html -->
   <header>
     <div class="logo">
-      <<a href="index.html">
+      <a href="index.html">
         <img src="assets/images/logos/leblanc solutions stylized text no bg.png" alt="Leblanc Solutions Logo" height="50">
       </a>
     </div>
@@ -43,16 +46,16 @@
     <div class="services-folder">
       <!-- Tab navigation -->
       <div class="tab-navigation">
-        <button class="tab-btn active" data-tab="menus">
-          <span class="tab-icon">🍸</span>
+        <button class="tab-btn active" data-tab="menus" role="tab" aria-selected="true" aria-controls="menus">
+          <span class="tab-icon" aria-hidden="true">🍸</span>
           <span class="tab-text">Menus</span>
         </button>
-        <button class="tab-btn" data-tab="packages">
-          <span class="tab-icon">📦</span>
+        <button class="tab-btn" data-tab="packages" role="tab" aria-selected="false" aria-controls="packages">
+          <span class="tab-icon" aria-hidden="true">📦</span>
           <span class="tab-text">Packages</span>
         </button>
-        <button class="tab-btn" data-tab="pricing">
-          <span class="tab-icon">💰</span>
+        <button class="tab-btn" data-tab="pricing" role="tab" aria-selected="false" aria-controls="pricing">
+          <span class="tab-icon" aria-hidden="true">💰</span>
           <span class="tab-text">Pricing</span>
         </button>
       </div>
@@ -61,7 +64,7 @@
       <div class="tab-content-container">
         
         <!-- Menus Tab -->
-<div class="tab-content active" id="menus">
+<div class="tab-content active" id="menus" role="tabpanel" aria-labelledby="menus-tab">
   <div class="menu-section">
     <h2>Our Sample Menus</h2>
     <p class="section-intro">Explore our curated cocktail collections, each crafted for different vibes and occasions.</p>
@@ -364,15 +367,15 @@
   </main>
 
   <!-- Footer reused from index.html -->
-  <footer>
-    <div class="social-links">
-      <a href="#" target="_blank">Facebook</a>
-      <a href="#" target="_blank">Twitter</a>
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">LinkedIn</a>
-    </div>
-    <p>&copy; 2025 Jewel Leblanc. All rights reserved. Site created and maintained by Brian Cordry.</p>
-  </footer>
+      <footer>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">Facebook</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page">Twitter</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">Instagram</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn page">LinkedIn</a>
+        </div>
+        <p>&copy; 2025 Jewel Leblanc. All rights reserved. Site created and maintained by Brian Cordry.</p>
+      </footer>
 
  
 <script src="js/bartendingscript.js"></script>

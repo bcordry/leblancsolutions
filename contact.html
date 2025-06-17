@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Huninn&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Shared sitewide styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -16,6 +17,8 @@
 </head>
 
 <body>
+
+
 
   <!-- Header reused verbatim from index.html -->
   <header>
@@ -27,7 +30,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
@@ -62,40 +65,41 @@
     </section>
 
     <!-- 2) Quote request form -->
-    <section class="quote-form-section">
-      <h2>Request a Custom Quote</h2>
-
-      <form id="quote-form" class="quote-form">
-        <label>
+    <form id="quote-form" class="quote-form" role="form" aria-labelledby="quote-form-heading">
+      <h2 id="quote-form-heading">Request a Custom Quote</h2>
+        
+        <label for="contact-name">
           Name
-          <input type="text" name="Name" required>
+          <input type="text" name="Name" id="contact-name" required aria-required="true">
         </label>
 
-        <label>
+        <label for="contact-email">
           Email
-          <input type="email" name="Email" required>
+          <input type="email" name="Email" id="contact-email" required aria-required="true">
         </label>
 
-        <label>
+        <label for="event-date">
           Event Date
-          <input type="date" name="Event Date" required>
+          <input type="date" name="Event Date" id="event-date" required aria-required="true">
         </label>
 
-        <label>
-          Type of Event
-          <select name="Event Type" required>
-            <option value="Wedding">Wedding</option>
-            <option value="House Party">House Party</option>
-            <option value="Barbecue">Barbecue</option>
-            <option value="Outdoor Party">Outdoor Party</option>
-            <option value="Formal Party">Formal Party</option>
-            <option value="Other">Other</option>
-          </select>
-        </label>
+        <label for="event-type">
+        Type of Event
+        <select name="Event Type" id="event-type" required aria-required="true">
+          <option value="">Select event type</option> <!-- Add default option -->
+          <option value="Wedding">Wedding</option>
+          <option value="House Party">House Party</option>
+          <option value="Barbecue">Barbecue</option>
+          <option value="Outdoor Party">Outdoor Party</option>
+          <option value="Formal Party">Formal Party</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
 
-        <label>
+        <label for="guest-count">
           Number of Guests
-          <select name="Guest Count" required>
+          <select name="Guest Count" id="guest-count" required aria-required="true">
+            <option value="">Select guest count</option> <!-- Add default option -->
             <option value="<10">&lt;10</option>
             <option value="11-25">11-25</option>
             <option value="26-50">26-50</option>
@@ -103,28 +107,29 @@
           </select>
         </label>
 
-        <label>
+        <label for="event-details">
           Details / Special Requests
-          <textarea name="Message"></textarea>
+          <textarea name="Message" id="event-details" aria-describedby="details-help"></textarea>
+          <small id="details-help">Optional: Tell us about any special requests or dietary restrictions</small>
         </label>
 
-        <button type="submit">Send Request</button>
-        <span id="form-status" style="margin-left:12px;"></span>
+        <button type="submit" aria-describedby="form-status">Send Request</button>
+        <span id="form-status" role="status" aria-live="polite" style="margin-left:12px;"></span>
       </form>
     </section>
 
   </main>
 
   <!-- Footer reused verbatim from index.html -->
-  <footer>
-    <div class="social-links">
-      <a href="#" target="_blank">Facebook</a>
-      <a href="#" target="_blank">Twitter</a>
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">LinkedIn</a>
-    </div>
-    <p>&copy; 2025 Jewel Leblanc. All rights reserved. Site created and maintained by Brian Cordry.</p>
-  </footer>
+      <footer>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">Facebook</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page">Twitter</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">Instagram</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn page">LinkedIn</a>
+        </div>
+        <p>&copy; 2025 Jewel Leblanc. All rights reserved. Site created and maintained by Brian Cordry.</p>
+      </footer>
 
   <!-- Page-specific JS -->
   <script src="js/contactscript.js"></script>

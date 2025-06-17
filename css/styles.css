@@ -5,22 +5,37 @@
       --light-orange: #FADDA0;
       --warm-cream: #FFFDD0;
       --off-white: #F8F8FF;
+      --blue: #257e9c;
+      --text-dark: #1a1a1a; /* Instead of #222 or #333 */
+      --text-medium: #4a4a4a; /* Instead of #666 */
+      --link-color: #1a5f7a; /* Darker blue for better contrast */
     }
 
-/* Font Styles */
-/* Huninn for body text */
-.huninn-regular {
-  font-family: "Huninn", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+
+
+.skip-link:focus {
+  top: 6px;
 }
 
-/* Edu SA Hand for titles */
-.edu-sa-hand {
-  font-family: "Edu SA Hand", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400; /* or 700 for bold */
-  font-style: normal;
+
+/* Focus styles for keyboard navigation */
+*:focus {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+/* Custom focus for buttons and links */
+button:focus,
+a:focus {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove default focus outline only when custom is applied */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
 }
 
 
@@ -33,10 +48,10 @@ header {
   width: 100%;
   z-index: 100;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  height: 70px; /* Fixed height for header */
+  height: 70px;
   min-height: 50px;
-  display: block; /* Remove flex for manual positioning */
-  font-family: "Huninn", sans-serif;
+  display: block;
+  font-family: 'Edu SA Hand', cursive; /* Updated this line */
 }
 
 .logo {
@@ -76,7 +91,7 @@ nav li {
 }
 
 nav a {
-  color: #333;
+  color: var(--text-dark);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -84,9 +99,23 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--light-orange);
+  color: var(--link-color);
 }
 
+
+/* Active page highlighting */
+nav a.active {
+  color: var(--link-color);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0px 0px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+nav a.active:hover {
+  color: var(--link-color);
+  background: rgba(255, 255, 255, 0.3);
+}
 
 
     /* Set up a soft gradient background */
@@ -94,13 +123,15 @@ nav a:hover {
     min-height: 100vh;
     margin: 0;
     background: radial-gradient(circle at 10% 40%, var(--green) 0%, var(--light-blue) 100%);
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif; /* Updated this line */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    font-family: "Huninn", sans-serif;
-    }
+    font-weight: 400;
+    line-height: 1.6; /* Added for better readability */
+    color: var(--text-dark);
+}
 
 
     .main-content {
@@ -145,21 +176,22 @@ nav a:hover {
 
     /* Middle circle: service links arranged in a circle */
     .service-circle {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 520px; height: 520px;
-      border-radius: 50%;
-      z-index: 2;
-      pointer-events: none; /* Prevent accidental hover on the circle itself */
-    }
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+    font-family: 'Edu SA Hand', cursive; /* Updated this line */
+}
 
     /* Each service link is absolutely positioned around the circle */
     .service-link {
       position: absolute;
-      width: 120px; height: 40px;
+      width: 144px; height: 40px;
       background: var(--warm-cream);
-      color: #222;
+      color: var(--text-dark);
       border-radius: 20px;
       display: flex;
       align-items: center;
@@ -206,9 +238,9 @@ nav a:hover {
     /* Animated propeller for scrolling text/emojis */
     .propeller {
       position: absolute;
-      top: 50%; left: 50%;
+      top: 50%; left: 50%; /* Centerpoint of the propeller */
       transform: translate(-50%, -50%);
-      width: 1400px; height: 720px;
+      width: 1500px; height: 720px;
       border-radius: 00%;
       z-index: 1;
       pointer-events: none;
@@ -250,14 +282,14 @@ nav a:hover {
     .scrolling-text img {
     height: 80px; /* Adjust this value to make them smaller/larger */
     width: auto; /* Maintains aspect ratio */
-    margin: 0 150px; /* Adds some spacing between the images */
+    margin: 0 180px; /* Adds some spacing between the images aka propellor arms */
     opacity: 0.9; /* Makes them slightly transparent so they're not too dominant */
     }
 
     /* Footer Styles */
     footer {
       background: var(--warm-cream);
-      color: #222;
+      color: var(--text-dark);
       text-align: center;
       padding: 10px 0;
       position: sticky; /* Make it sticky */
@@ -346,6 +378,16 @@ nav a:hover {
       border-left: 4px solid #b85fc6;
       padding-left: 16px;
     }
+
+/* Global heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Edu SA Hand', cursive;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+}
+
+
     /* Combined Media Query for Mobile-Friendly Version */
     @media (max-width: 600px) {
       /* Header Styles for Mobile */
@@ -371,14 +413,27 @@ nav a:hover {
         text-align: center;
       }
 
-      nav ul {
-        flex-direction: column;
+     nav ul {
+        flex-direction: row; /* Keep horizontal on mobile */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
       }
 
       nav li {
-        margin: 5px 0;
+        margin: 2px 4px;
       }
-
+      
+      nav a {
+          font-size: 0.9rem;
+          padding: 6px 10px;
+          border-radius: 4px;
+        }
+        
+        nav a.active {
+          padding: 6px 10px;
+        }
+        
       /* Existing Styles for Mobile */
       .centerpiece-container {
         width: 95vw;

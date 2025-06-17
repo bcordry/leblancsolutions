@@ -15,7 +15,8 @@
 .bartending-hero h1 {
   font-size: 3rem;
   margin: 0 0 10px 0;
-  font-weight: bold;
+  font-weight: 700; /* Updated from bold to 700 */
+  font-family: 'Edu SA Hand', cursive; /* Add this line */
 }
 
 .bartending-hero p {
@@ -56,6 +57,7 @@
   color: #666;
   transition: all 0.3s ease;
   position: relative;
+  font-family: 'Nunito', sans-serif; /* Add this line */
 }
 
 .tab-btn:hover {
